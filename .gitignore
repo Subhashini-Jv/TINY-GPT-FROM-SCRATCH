@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+data/shakespeare/*.bin
+data/shakespeare/input.txt
+out/*/ckpt.pt
