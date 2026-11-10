@@ -182,18 +182,6 @@ Things this version does beyond the minimum, all the same techniques real LLMs u
   keeps falling but validation stops, the model has started memorising (overfitting).
   That's what `dropout` fights.
 
-## Things to try
-
-1. Set `--n-layer 1` and compare samples. One layer learns letter patterns, more layers
-   learn structure.
-2. Remove the causal mask (comment out the `masked_fill` line). Training loss collapses to
-   near 0 because the model can see the answer, and generation turns to garbage. Then
-   run the tests to watch them catch it.
-3. Remove `pos_emb` from `forward`. How much worse is the validation loss?
-4. Try `--temperature 0.3` and `--temperature 1.5` on the same prompt.
-5. Train on your own text: song lyrics, code, your chat history.
-6. Look at `attention.png` for a prompt with a speaker name and find the head that looks
-   back at the start of the line.
 
 ## Further reading
 
